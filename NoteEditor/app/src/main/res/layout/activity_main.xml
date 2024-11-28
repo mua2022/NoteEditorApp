@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,8 +10,8 @@
         android:id="@+id/editTextNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Write a note"
         android:gravity="top"
+        android:hint="Write a note"
         android:inputType="textMultiLine"
         android:lines="5" />
 
@@ -21,8 +20,8 @@
         android:id="@+id/buttonPostNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Post Note"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:text="Post Note" />
 
     <!-- RecyclerView to display all notes -->
     <androidx.recyclerview.widget.RecyclerView

@@ -1,11 +1,11 @@
 package com.example.noteeditor;
-
 public class Note {
     private String text;
     private String author;
     private int likes;
     private int dislikes;
 
+    // Constructor
     public Note(String text, String author) {
         this.text = text;
         this.author = author;
@@ -13,12 +13,29 @@ public class Note {
         this.dislikes = 0;
     }
 
-    // Getters and Setters
-    public String getText() { return text; }
-    public String getAuthor() { return author; }
-    public int getLikes() { return likes; }
-    public int getDislikes() { return dislikes; }
+    // Getters
+    public String getText() {
+        return text;
+    }
 
-    public void like() { likes++; }
-    public void dislike() { dislikes++; }
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public int getDislikes() {
+        return dislikes;
+    }
+
+    // Methods to increment likes and dislikes
+    public void like() {
+        likes++;
+    }
+
+    public void dislike() {
+        dislikes++;
+    }
 }
