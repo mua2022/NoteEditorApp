@@ -8,6 +8,7 @@
     android:background="#FFFFFF"
     android:layout_marginBottom="8dp">
 
+    <!-- Note Text -->
     <TextView
         android:id="@+id/textViewNoteText"
         android:layout_width="match_parent"
@@ -15,6 +16,7 @@
         android:textSize="16sp"
         android:textColor="#000000" />
 
+    <!-- Author -->
     <TextView
         android:id="@+id/textViewAuthor"
         android:layout_width="match_parent"
@@ -23,10 +25,12 @@
         android:textColor="#777777"
         android:layout_marginBottom="8dp" />
 
+    <!-- Like, Dislike, and Comment Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
         <Button
             android:id="@+id/buttonLike"
@@ -34,18 +38,54 @@
             android:layout_height="wrap_content"
             android:text="Like" />
 
+        <TextView
+            android:id="@+id/textViewLikeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            android:textSize="14sp" />
+
         <Button
             android:id="@+id/buttonDislike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dislike"
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="16dp"
+            android:text="Dislike" />
+
+        <TextView
+            android:id="@+id/textViewDislikeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/buttonComment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comment"
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="16dp"
+            android:text="Comment" />
     </LinearLayout>
+
+    <!-- Comment Area -->
+    <EditText
+        android:id="@+id/editTextComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write a comment..."
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <TextView
+        android:id="@+id/textViewComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text=""
+        android:visibility="gone" />
 </LinearLayout>
